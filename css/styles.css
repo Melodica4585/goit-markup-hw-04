@@ -38,6 +38,8 @@ a {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color:var(--primary-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .button:focus {
@@ -132,7 +134,7 @@ color: var(--title-text-color);
 }
 
 .feature,
-.portfolio {
+.name {
     color: var(--secondary-text-color);
     position: absolute;
     width: 1px;
@@ -165,12 +167,6 @@ color: var(--title-text-color);
 font-size: 14px;
 line-height: 2;
 color:var(--title-text-color);
-}
-
-.service,
-.features {
-background-color:var(--secondary-text-color);
-padding-bottom: 94px;
 }
 
 .service-info,
@@ -374,7 +370,7 @@ img {
     align-items: center;
 }
 
-.header-inner {
+.container > .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -435,12 +431,6 @@ margin-left: 50px;
     justify-content: space-between;
 }
 
-.section {
-    padding-top: 94px;
-    padding-left: auto;
-    padding-right: auto;
-}
-
 .team-info {
     padding-bottom: 50px;
     border: 0px;
@@ -452,19 +442,13 @@ margin-left: 50px;
 }
 
 .page-header {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
     align-items: center;
     display: flex;
 }
 
 .logo-header {
-    margin-top: 24px;
-    margin-bottom: 25px;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .solution-text {
@@ -478,12 +462,16 @@ margin-left: 50px;
 }
 
 .contacts {
-    padding-bottom: 9px;
+    margin-bottom: 9px;
     align-items: center;
 }
 
+.contacts:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
 .logo {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .portfolio-options {
@@ -515,15 +503,12 @@ margin-left: 50px;
     padding-left: 24px;
     padding-bottom: 20px;
     padding-right: 24px;
-    border: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-top: 0;
     border-color: rgba(238, 238, 238, 1);
     border-style: solid;
-}
-
-.portfolio-section {
-    padding-top: 100px;
-    padding-bottom: 94px;
-    border-top: 1px solid #ECECEC;
 }
 
 .page-footer {
@@ -531,8 +516,24 @@ margin-left: 50px;
     padding-bottom: 60px;
 }
 
-.our-team {
+.section {
     padding-top: 94px;
     padding-bottom: 94px;
-    color:var(--primary-text-color);
+}
+
+.our-team section {
+    background-color:var(--secondary-bg-color);
+}
+
+.features section {
+    background-color:var(--secondary-text-color);
+}
+
+.service {
+    padding-top: 0;
+    background-color:var(--secondary-text-color);
+}
+
+.portfolio {
+    border-top: 1px solid #ECECEC;
 }
